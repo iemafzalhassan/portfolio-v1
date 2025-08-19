@@ -18,9 +18,9 @@ publishDir = 'public'
 # Menu configuration
 [menu]
   [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/about/'
+    identifier = 'blogs'
+    name = 'Blog'
+    url = '/blogs/'
     weight = 10
   [[menu.main]]
     identifier = 'projects'
@@ -28,9 +28,9 @@ publishDir = 'public'
     url = '/projects/'
     weight = 20
   [[menu.main]]
-    identifier = 'blogs'
-    name = 'Blog'
-    url = '/blogs/'
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
     weight = 30
 
 # Blowfish theme configuration

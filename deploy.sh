@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Deploy script for Hugo portfolio
-echo "🚀 Starting deployment..."
+echo "Starting deployment..."
 
 # Build the site
-echo "📦 Building site..."
+echo "Building site..."
 hugo --minify
 
 # Check if build was successful
 if [ $? -eq 0 ]; then
-    echo "✅ Build successful!"
+    echo "Build successful!"
     
     # Navigate to public directory (submodule)
     cd public
@@ -21,12 +21,12 @@ if [ $? -eq 0 ]; then
     git commit -m "Deploy: $(date)"
     
     # Push to GitHub Pages
-    echo "🚀 Pushing to GitHub Pages..."
+    echo "Pushing to GitHub Pages..."
     git push origin main
     
-    echo "✅ Deployment complete! Your site should be live at:"
-    echo "   https://iemafzalhassan.github.io/portfolio-pages/"
+    echo "Deployment complete! Your site should be live at:"
+    echo "https://iemafzalhassan.me/portfolio-pages/"
 else
-    echo "❌ Build failed!"
+    echo "Build failed!"
     exit 1
 fi
