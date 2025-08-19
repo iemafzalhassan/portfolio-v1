@@ -1,29 +1,51 @@
 ---
 title: "Afzal Hassan"
-description: "DevOps Engineer & Cloud Enthusiast"
+description: "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
 layout: "page"
 showRecent: true
-recentLimit: 5
+recentLimit: 6
 ---
 
 # Welcome to My Portfolio! 🚀
 
-I'm a DevOps engineer passionate about automation, cloud technologies, and open source.
+I'm **Afzal Hassan**, a passionate DevOps engineer with expertise in cloud infrastructure, automation, and modern deployment practices. I help organizations build scalable, reliable, and efficient systems.
 
 ## What I Do
 
-- **Cloud Infrastructure:** AWS, Azure, GCP
-- **Infrastructure as Code:** Terraform, CloudFormation
-- **Containerization:** Docker, Kubernetes
-- **CI/CD:** Jenkins, GitLab CI, GitHub Actions
-- **Monitoring:** Prometheus, Grafana, ELK Stack
+### 🏗️ **Infrastructure as Code**
+- **Terraform & CloudFormation**: Automated infrastructure provisioning
+- **Multi-cloud deployments**: AWS, Azure, GCP
+- **Container orchestration**: Kubernetes, Docker Swarm
 
-## Recent Posts
+### ☁️ **Cloud Platforms**
+- **AWS**: EC2, S3, Lambda, ECS, RDS, CloudWatch
+- **Azure**: Virtual Machines, App Services, Functions
+- **GCP**: Compute Engine, Cloud Storage, Cloud Functions
 
-Stay tuned for my latest blog posts about DevOps, cloud technologies, and automation!
+### 🔄 **CI/CD & Automation**
+- **Pipeline tools**: Jenkins, GitLab CI, GitHub Actions
+- **Configuration management**: Ansible, Chef, Puppet
+- **Monitoring & observability**: Prometheus, Grafana, ELK Stack
 
-## Quick Links
+## Featured Skills
 
-- [About Me](http://iemafzalhassan.me/portfolio-pages//about/) - Learn more about my background and skills
-- [Projects](http://iemafzalhassan.me/portfolio-pages//projects/) - Check out my latest work
-- [Blog](http://iemafzalhassan.me/portfolio-pages//blogs/) - Read my thoughts on DevOps and technology
+<div class="skills-grid">
+- **Infrastructure**: Terraform, CloudFormation, ARM Templates
+- **Containers**: Docker, Kubernetes, Helm, ECS
+- **Monitoring**: Prometheus, Grafana, CloudWatch, ELK
+- **Security**: IAM, VPC, Security Groups, Compliance
+- **Scripting**: Python, Bash, PowerShell, Go
+- **Databases**: RDS, DynamoDB, MongoDB, PostgreSQL
+</div>
+
+## Recent Projects
+
+Stay tuned for my latest work on cloud migrations, automation projects, and open source contributions!
+
+## Let's Connect
+
+I'm always interested in discussing new opportunities, collaborations, or just chatting about DevOps and cloud technologies. Feel free to reach out!
+
+---
+
+*"Infrastructure as Code is not just a practice, it's a mindset that transforms how we build and maintain systems."*
