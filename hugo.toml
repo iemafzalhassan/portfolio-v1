@@ -18,9 +18,9 @@ publishDir = 'public'
 # Menu configuration
 [menu]
   [[menu.main]]
-    identifier = 'blogs'
-    name = 'Blog'
-    url = '/blogs/'
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
     weight = 10
   [[menu.main]]
     identifier = 'projects'
@@ -28,56 +28,94 @@ publishDir = 'public'
     url = '/projects/'
     weight = 20
   [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/about/'
+    identifier = 'blogs'
+    name = 'Blog'
+    url = '/blogs/'
     weight = 30
 
 # Blowfish theme configuration
 [params]
   # Site description
-  description = "DevOps Engineer & Cloud Enthusiast"
+  description = "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
+  
+  # Theme appearance
+  colorScheme = "blowfish"  # Professional color scheme
+  defaultAppearance = "dark"  # Modern dark theme
+  autoSwitchAppearance = true  # Allow users to switch
+  
+  # Professional features
+  enableSearch = true
+  enableCodeCopy = true
+  enableA11y = true  # Accessibility features
+  
+  # SEO and performance
+  fingerprintAlgorithm = "sha512"
   
   # Author information
   [params.author]
     name = "Afzal Hassan"
-    image = ""
+    image = "/img/profile.jpg"  # Add your profile image
     bio = "DevOps Engineer & Cloud Enthusiast"
     links = [
-      { name = "GitHub", url = "https://github.com/iemafzalhassan" }
+      { name = "GitHub", url = "https://github.com/iemafzalhassan", icon = "github" },
+      { name = "LinkedIn", url = "https://linkedin.com/in/iemafzalhassan", icon = "linkedin" },
+      { name = "Twitter", url = "https://twitter.com/iemafzalhassan", icon = "twitter" }
     ]
   
-  # Theme appearance
-  colorScheme = "auto"
-  defaultTheme = "system"
+  # Header configuration
+  [params.header]
+    layout = "fixed"  # Professional fixed header
   
-  # Show reading time
-  showReadingTime = true
+  # Footer configuration
+  [params.footer]
+    showMenu = true
+    showCopyright = true
+    showThemeAttribution = true
+    showAppearanceSwitcher = true
+    showScrollToTop = true
   
-  # Show word count
-  showWordCount = true
+  # Homepage configuration
+  [params.homepage]
+    layout = "profile"  # Professional profile layout
+    showRecent = true
+    recentLimit = 6
+    showMoreLink = true
+    showMoreLinkDest = "blogs"
   
-  # Show table of contents
-  showToc = true
+  # Article configuration
+  [params.article]
+    showDate = true
+    showDateUpdated = true
+    showAuthor = true
+    showHero = true
+    heroStyle = "background"  # Professional hero style
+    showBreadcrumbs = true
+    showReadingTime = true
+    showTableOfContents = true
+    showRelatedContent = true
+    showTaxonomies = true
+    showWordCount = true
+    sharingLinks = ["linkedin", "twitter", "github", "email"]
   
-  # Show related content
-  showRelatedContent = true
-
-# Blowfish specific settings
-[params.homepage]
-  layout = "page"
-  showRecent = true
-  recentLimit = 5
-
-[params.profile]
-  title = "Afzal Hassan"
-  subtitle = "DevOps Engineer & Cloud Enthusiast"
-  imageUrl = ""
-  imageTitle = "Afzal Hassan"
-  buttons = [
-    { name = "GitHub", url = "https://github.com/iemafzalhassan" },
-    { name = "LinkedIn", url = "https://linkedin.com/in/iemafzalhassan" }
-  ]
+  # List configuration
+  [params.list]
+    showHero = true
+    heroStyle = "background"
+    showBreadcrumbs = true
+    showSummary = true
+    cardView = true
+  
+  # Profile configuration
+  [params.profile]
+    title = "Afzal Hassan"
+    subtitle = "DevOps Engineer & Cloud Enthusiast"
+    imageUrl = "/img/profile.jpg"
+    imageTitle = "Afzal Hassan"
+    buttons = [
+      { name = "GitHub", url = "https://github.com/iemafzalhassan", icon = "github" },
+      { name = "LinkedIn", url = "https://linkedin.com/in/iemafzalhassan", icon = "linkedin" },
+      { name = "Resume", url = "/resume.pdf", icon = "file-pdf" }
+    ]
 
 # Markup configuration
 [markup]
@@ -87,4 +125,4 @@ publishDir = 'public'
   [markup.highlight]
     noClasses = false
     noHl = false
-    style = "github"
+    style = "github-dark"  # Professional code highlighting
