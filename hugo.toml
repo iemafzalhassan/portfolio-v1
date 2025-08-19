@@ -15,6 +15,13 @@ buildExpired = false
 # Output settings
 publishDir = 'public'
 
+# Assets configuration
+[assets]
+  [assets.css]
+    toCSS = { minify = true }
+  [assets.js]
+    toJS = { minify = true }
+
 # Menu configuration
 [menu]
   [[menu.main]]

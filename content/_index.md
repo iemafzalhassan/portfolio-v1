@@ -6,11 +6,21 @@ showRecent: true
 recentLimit: 6
 ---
 
-# Welcome to My Portfolio! 🚀
+# Hello, I'm Afzal Hassan 👋
 
-I'm **Afzal Hassan**, a passionate DevOps engineer with expertise in cloud infrastructure, automation, and modern deployment practices. I help organizations build scalable, reliable, and efficient systems.
+I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.
 
-## What I Do
+## What I Can Help You With
+
+- **DevOps Engineering & Automation**
+- **Infrastructure as Code (IaC) & Scalable Architectures**
+- **Cloud & Edge Computing Solutions**
+- **Containerization & Microservices Orchestration**
+- **System Administration & Network Reliability**
+- **Open Source & DevOps Community Leadership**
+- **and more...**
+
+## Featured Skills
 
 ### 🏗️ **Infrastructure as Code**
 - **Terraform & CloudFormation**: Automated infrastructure provisioning
@@ -26,15 +36,6 @@ I'm **Afzal Hassan**, a passionate DevOps engineer with expertise in cloud infra
 - **Pipeline tools**: Jenkins, GitLab CI, GitHub Actions
 - **Configuration management**: Ansible, Chef
 - **Monitoring & observability**: Prometheus, Grafana, ELK Stack
-
-## Featured Skills
-
-- **Infrastructure**: Terraform, CloudFormation, ARM Templates
-- **Containers**: Docker, Kubernetes, Helm, ECS
-- **Monitoring**: Prometheus, Grafana, CloudWatch, ELK
-- **Security**: IAM, VPC, Security Groups, Compliance
-- **Scripting**: Python, Bash, PowerShell, Go
-- **Databases**: RDS, DynamoDB, MongoDB, PostgreSQL
 
 ## Recent Projects
 

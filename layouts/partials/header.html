@@ -1,0 +1,90 @@
+<!-- Custom Professional Header with Favicon -->
+<header class="custom-header">
+  <div class="header-container">
+    <!-- Logo with Favicon -->
+    <a href="/" class="logo-container">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">iemafzalhassan</span>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav class="custom-nav" id="customNav">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-link marker-effect elastic">
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </nav>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-toggle" id="darkToggle">
+      <div class="dark-toggle-icon horizon">
+        <!-- Sun Icon -->
+        <svg id="sun" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <!-- Moon Icon -->
+        <svg id="moon" class="hidden" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M4 8h16M4 16h16"></path>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div style="height: 5rem;"></div>
+
+<!-- JavaScript for mobile menu and dark mode toggle -->
+<script>
+  // Mobile menu functionality
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const customNav = document.getElementById('customNav');
+  
+  mobileMenuToggle.addEventListener('click', () => {
+    customNav.classList.toggle('mobile-open');
+  });
+
+  // Dark mode toggle functionality
+  const darkToggle = document.getElementById('darkToggle');
+  const sunIcon = document.getElementById('sun');
+  const moonIcon = document.getElementById('moon');
+  
+  // Check for saved theme preference or default to 'light'
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  
+  // Apply the current theme
+  if (currentTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+    sunIcon.classList.add('hidden');
+    moonIcon.classList.remove('hidden');
+  } else {
+    document.documentElement.classList.remove('dark');
+    sunIcon.classList.remove('hidden');
+    moonIcon.classList.add('hidden');
+  }
+  
+  // Toggle theme
+  darkToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+    }
+  });
+</script>
