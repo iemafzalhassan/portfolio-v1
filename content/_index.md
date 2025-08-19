@@ -29,14 +29,12 @@ I'm **Afzal Hassan**, a passionate DevOps engineer with expertise in cloud infra
 
 ## Featured Skills
 
-<div class="skills-grid">
 - **Infrastructure**: Terraform, CloudFormation, ARM Templates
 - **Containers**: Docker, Kubernetes, Helm, ECS
 - **Monitoring**: Prometheus, Grafana, CloudWatch, ELK
 - **Security**: IAM, VPC, Security Groups, Compliance
 - **Scripting**: Python, Bash, PowerShell, Go
 - **Databases**: RDS, DynamoDB, MongoDB, PostgreSQL
-</div>
 
 ## Recent Projects
 
