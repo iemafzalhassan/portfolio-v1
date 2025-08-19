@@ -24,6 +24,6 @@ Stay tuned for my latest blog posts about DevOps, cloud technologies, and automa
 
 ## Quick Links
 
-- [About Me](/about/) - Learn more about my background and skills
-- [Projects](/projects/) - Check out my latest work
-- [Blog](/blogs/) - Read my thoughts on DevOps and technology
+- [About Me](http://iemafzalhassan.me/portfolio-pages//about/) - Learn more about my background and skills
+- [Projects](http://iemafzalhassan.me/portfolio-pages//projects/) - Check out my latest work
+- [Blog](http://iemafzalhassan.me/portfolio-pages//blogs/) - Read my thoughts on DevOps and technology
