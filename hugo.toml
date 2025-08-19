@@ -1,0 +1,90 @@
+baseURL = 'https://iemafzalhassan.me/portfolio-pages/'
+languageCode = 'en-us'
+title = 'Afzal Hassan - DevOps Engineer'
+theme = 'blowfish'
+
+# Enable features
+enableGitInfo = false
+enableEmoji = true
+
+# Build settings
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Output settings
+publishDir = 'public'
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'projects'
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'blogs'
+    name = 'Blog'
+    url = '/blogs/'
+    weight = 30
+
+# Blowfish theme configuration
+[params]
+  # Site description
+  description = "DevOps Engineer & Cloud Enthusiast"
+  
+  # Author information
+  [params.author]
+    name = "Afzal Hassan"
+    image = ""
+    bio = "DevOps Engineer & Cloud Enthusiast"
+    links = [
+      { name = "GitHub", url = "https://github.com/iemafzalhassan" }
+    ]
+  
+  # Theme appearance
+  colorScheme = "auto"
+  defaultTheme = "system"
+  
+  # Show reading time
+  showReadingTime = true
+  
+  # Show word count
+  showWordCount = true
+  
+  # Show table of contents
+  showToc = true
+  
+  # Show related content
+  showRelatedContent = true
+
+# Blowfish specific settings
+[params.homepage]
+  layout = "page"
+  showRecent = true
+  recentLimit = 5
+
+[params.profile]
+  title = "Afzal Hassan"
+  subtitle = "DevOps Engineer & Cloud Enthusiast"
+  imageUrl = ""
+  imageTitle = "Afzal Hassan"
+  buttons = [
+    { name = "GitHub", url = "https://github.com/iemafzalhassan" },
+    { name = "LinkedIn", url = "https://linkedin.com/in/iemafzalhassan" }
+  ]
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    noHl = false
+    style = "github"
