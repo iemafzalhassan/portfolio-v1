@@ -1,7 +1,7 @@
 baseURL = 'https://iemafzalhassan.me/portfolio-pages/'
 languageCode = 'en-us'
 title = 'Afzal Hassan - DevOps Engineer'
-theme = 'midnight'
+theme = 'blowfish'
 
 # Enable features
 enableGitInfo = false
@@ -39,7 +39,7 @@ publishDir = 'public'
   description = "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
   
   # Theme appearance
-  colorScheme = "blowfish"  # Professional color scheme
+  colorScheme = "midnight"  # Professional color scheme
   defaultAppearance = "dark"  # Modern dark theme
   autoSwitchAppearance = true  # Allow users to switch
   
