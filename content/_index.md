@@ -24,7 +24,7 @@ I'm **Afzal Hassan**, a passionate DevOps engineer with expertise in cloud infra
 
 ### 🔄 **CI/CD & Automation**
 - **Pipeline tools**: Jenkins, GitLab CI, GitHub Actions
-- **Configuration management**: Ansible, Chef, Puppet
+- **Configuration management**: Ansible, Chef
 - **Monitoring & observability**: Prometheus, Grafana, ELK Stack
 
 ## Featured Skills
