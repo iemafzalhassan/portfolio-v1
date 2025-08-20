@@ -6,7 +6,6 @@ layout: "page"
 
 I'm Afzal Hassan, a DevOps engineer who loves building scalable systems and automating everything.
 
-![About Me](static/img/about.jpg)
 
 ## Skills & Expertise
 
