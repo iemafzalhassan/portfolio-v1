@@ -21,17 +21,17 @@ I'm a **DevOps Engineer** living in India. Bridging Development and Operations |
 
 ## Featured Skills
 
-### 🏗️ **Infrastructure as Code**
+### **Infrastructure as Code**
 - **Terraform & CloudFormation**: Automated infrastructure provisioning
 - **Multi-cloud deployments**: AWS, Azure, GCP
 - **Container orchestration**: Kubernetes, Docker Swarm
 
-### ☁️ **Cloud Platforms**
+### **Cloud Platforms**
 - **AWS**: EC2, S3, Lambda, ECS, RDS, CloudWatch
 - **Azure**: Virtual Machines, App Services, Functions
 - **GCP**: Compute Engine, Cloud Storage, Cloud Functions
 
-### 🔄 **CI/CD & Automation**
+### **CI/CD & Automation**
 - **Pipeline tools**: Jenkins, GitLab CI, GitHub Actions
 - **Configuration management**: Ansible, Chef
 - **Monitoring & observability**: Prometheus, Grafana, ELK Stack
@@ -40,9 +40,6 @@ I'm a **DevOps Engineer** living in India. Bridging Development and Operations |
 
 Stay tuned for my latest work on cloud migrations, automation projects, and open source contributions!
 
-## Let's Connect
-
-I'm always interested in discussing new opportunities, collaborations, or just chatting about DevOps and cloud technologies. Feel free to reach out!
 
 ---
 
