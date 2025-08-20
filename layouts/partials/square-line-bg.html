@@ -1,0 +1,30 @@
+<!-- Square Line Background Effect -->
+<div class="square-line-bg">
+  <!-- Left side -->
+  <div class="square-line-left">
+    <div class="square-line-gradient"></div>
+    <div class="square-line-container matrix-scan">
+      {{ range seq 6 }}
+        <div class="square-line-row glow-effect">
+          {{ range seq 9 }}
+            <div class="square-line-cell"></div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Right side -->
+  <div class="square-line-right">
+    <div class="square-line-gradient"></div>
+    <div class="square-line-container matrix-scan-reverse">
+      {{ range seq 6 }}
+        <div class="square-line-row glow-effect">
+          {{ range seq 9 }}
+            <div class="square-line-cell"></div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
