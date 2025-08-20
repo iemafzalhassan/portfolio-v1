@@ -25,7 +25,7 @@ if [ $? -eq 0 ]; then
     git push origin main
     
     echo "Deployment complete! Your site should be live at:"
-    echo "https://iemafzalhassan.me/portfolio-pages/"
+    echo "https://portfolio.iemafzalhassan.in/"
 else
     echo "Build failed!"
     exit 1
