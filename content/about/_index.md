@@ -9,7 +9,7 @@ Every system I touch, I aim to make it **resilient, observable, and future-ready
 
 💡 For me, **DevOps = Art + Engineering**. It’s about painting stability with automation, coding pipelines that feel alive, and turning infrastructure into something as seamless as software.
 
-{{< figure src="img/about.jpg" alt="About Me Hero Image" caption="About Me" >}}
+{{< figure src="img/about.jpg" caption="About Me" >}}
 
 ---
 

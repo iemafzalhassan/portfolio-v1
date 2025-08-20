@@ -43,7 +43,6 @@ publishDir = 'public'
 
   [params.author]
     name = "Afzal Hassan"
-    image = "https://avatars.githubusercontent.com/u/136967348?v=4"
     bio = "DevOps Engineer & Cloud Enthusiast"
     links = [
       { name = "GitHub", icon = "github", url = "https://github.com/iemafzalhassan" },
