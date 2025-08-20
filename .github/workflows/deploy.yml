@@ -7,6 +7,12 @@ on:
     branches: [ main ]
   workflow_dispatch:  # Allow manual triggering
 
+# Permissions needed for external repository deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 env:
   HUGO_VERSION: "0.119.0"
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -102,7 +108,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: main
-          repository_name: ${{ github.repository_owner }}/portfolio-pages
+          external_repository: iemafzalhassan/portfolio-pages
           cname: portfolio.iemafzalhassan.in
 
       - name: Send Slack Success Notification
