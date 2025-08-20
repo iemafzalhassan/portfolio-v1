@@ -6,53 +6,63 @@ showRecent: true
 recentLimit: 6
 ---
 
-I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.
+**DevOps Engineer | Cloud & Automation Enthusiast | Open Source Contributor**
 
 ![GitHub Avatar](https://avatars.githubusercontent.com/u/136967348?v=4)
 
-## What I Can Help You With
+---
 
-- **DevOps Engineering & Automation**
-- **Infrastructure as Code (IaC) & Scalable Architectures**
-- **Cloud & Edge Computing Solutions**
-- **Containerization & Microservices Orchestration**
-- **System Administration & Network Reliability**
-- **Open Source & DevOps Community Leadership**
-- **and more...**
+## 🌟 About Me  
 
-## Featured Skills
+Hi, I’m **Afzal Hassan** — a DevOps Engineer from India.  
+I bridge the gap between **development** and **operations** by designing **scalable, automated, and secure systems**.  
 
-### **Infrastructure as Code**
-- **Terraform & CloudFormation**: Automated infrastructure provisioning
-- **Multi-cloud deployments**: AWS, Azure, GCP
-- **Container orchestration**: Kubernetes, Docker Swarm
-
-### **Cloud Platforms**
-- **AWS**: EC2, S3, Lambda, ECS, RDS, CloudWatch
-- **Azure**: Virtual Machines, App Services, Functions
-- **GCP**: Compute Engine, Cloud Storage, Cloud Functions
-
-### **CI/CD & Automation**
-- **Pipeline tools**: Jenkins, GitLab CI, GitHub Actions
-- **Configuration management**: Ansible, Chef
-- **Monitoring & observability**: Prometheus, Grafana, ELK Stack
-
-## Recent Projects
-
-### 🏪 [Retail Store Sample App - GitOps with EKS Auto Mode](/projects/reatilshop-gitops/)
-A comprehensive microservices application demonstrating modern DevOps practices and GitOps principles on AWS EKS. Features ArgoCD, Terraform, GitHub Actions, and automated deployment pipelines.
-
-### 💬 [Full Stack Real-Time Chat Application](/projects/chat-app/)
-Modern real-time chat application built with React, Node.js, Socket.io, and MongoDB. Features instant messaging, user authentication, and containerized deployment with Docker.
-
-### 🛒 [Modern E-commerce Platform](/projects/online-shop/)
-Responsive e-commerce platform with dark/light theme system and advanced product management. Demonstrates DevOps automation with 50% faster deployment and optimized Docker builds.
-
-### 🛍️ [EasyShop Demo - E-commerce Solution](/projects/easyshop/)
-Modern e-commerce demo application showcasing web development capabilities and deployment best practices with clean code architecture and responsive design.
-
-Stay tuned for more cloud migrations, automation projects, and open source contributions!
+I’m passionate about:  
+- 🚀 **Scaling production systems**  
+- ⚡ **Automation with Infrastructure as Code (IaC)**  
+- ☁️ **Cloud & Edge Computing**  
+- 🐳 **Container Orchestration with Kubernetes & Docker**  
+- 🤝 **Open Source collaboration & DevOps Community building**  
 
 ---
 
-*"Infrastructure as Code is not just a practice, it's a mindset that transforms how we build and maintain systems."*
+## 🔧 What I Do  
+
+- **DevOps Engineering & Automation** – CI/CD pipelines, GitOps, automation  
+- **Infrastructure as Code (IaC)** – Terraform, CloudFormation, Ansible  
+- **Cloud Architectures** – AWS, Azure, GCP multi-cloud solutions  
+- **Microservices Orchestration** – Kubernetes, Helm, Docker Swarm  
+- **Monitoring & Reliability** – Prometheus, Grafana, ELK Stack  
+- **Community Leadership** – Mentoring, contributing & sharing knowledge  
+
+---
+
+## 🚀 Featured Skills  
+
+### 🏗 Infrastructure as Code  
+- **Terraform & CloudFormation** – Automated provisioning  
+- **Multi-cloud deployments** – AWS | Azure | GCP  
+- **Kubernetes & Helm** – Production-grade orchestration  
+
+### ☁️ Cloud Platforms  
+- **AWS**: EC2, S3, Lambda, ECS, RDS, CloudWatch  
+- **Azure**: VMs, App Services, Functions  
+- **GCP**: Compute Engine, Cloud Storage, Cloud Functions  
+
+### 🔄 CI/CD & Automation  
+- **Pipelines**: Jenkins, GitLab CI, GitHub Actions  
+- **Config Management**: Ansible, Chef, Puppet  
+- **Monitoring & Observability**: Prometheus, Grafana, ELK  
+
+---
+
+## ✨ Philosophy  
+
+> *“Infrastructure as Code is not just a practice, it’s a mindset that transforms how we build and maintain systems.”*  
+
+---
+
+## 📬 Let’s Connect  
+
+{{< social-icons >}}
+

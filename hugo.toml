@@ -38,52 +38,38 @@ publishDir = 'public'
 
 # Blowfish theme parameters
 [params]
-  # Site description
   description = "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
-  
-  # Color scheme - Noir theme
   colorScheme = "noir"
-  
-  # Author information
+
   [params.author]
     name = "Afzal Hassan"
     image = "https://avatars.githubusercontent.com/u/136967348?v=4"
     bio = "DevOps Engineer & Cloud Enthusiast"
     links = [
-      { name = "GitHub", url = "https://github.com/iemafzalhassan" },
-      { name = "LinkedIn", url = "https://www.linkedin.com/in/iemafzalhassan/" },
-      { name = "Twitter", url = "https://x.com/iemafzalhassan" }
+      { name = "GitHub", icon = "github", url = "https://github.com/iemafzalhassan" },
+      { name = "LinkedIn", icon = "linkedin", url = "https://www.linkedin.com/in/iemafzalhassan/" },
+      { name = "Twitter", icon = "twitter", url = "https://x.com/iemafzalhassan" }
     ]
-  
-  # Header configuration
+
   [params.header]
     layout = "fixed"
     desktopMode = "fixed"
     mobileMode = "auto"
-  
-  # Footer configuration
+
   [params.footer]
     enable = true
     showMenu = true
     showCopyright = true
-    showThemeAttribution = true
+    showThemeAttribution = false
     showAppearanceSwitcher = true
-  
-  # Search configuration
+
   [params.search]
     enable = true
     type = "fuse"
     fuseOpts = { keys = ["title", "permalink", "summary", "content"] }
-  
-  # Social icons
-  [params.socialIcons]
-    github = "https://github.com/iemafzalhassan"
-    linkedin = "https://www.linkedin.com/in/iemafzalhassan/"
-    twitter = "https://x.com/iemafzalhassan"
-  
-  # Home page configuration
+
   [params.homepage]
     layout = "page"
     showRecent = true
-    recentLimit = 6
+    recentLimit = 3
     showFullTextinRSS = true
