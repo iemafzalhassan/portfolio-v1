@@ -112,6 +112,7 @@ run_pre_checks() {
     # Check if it's a git repository or submodule
     if [ ! -f "public/.git" ] && [ ! -d "public/.git" ]; then
         log "ERROR" "public directory is not a git repository (submodule not initialized?)"
+        log "INFO" "Run: git submodule update --init --recursive"
         return 1
     fi
     
