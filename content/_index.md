@@ -6,9 +6,15 @@ showRecent: true
 recentLimit: 6
 ---
 
-I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.
-
-![GitHub Avatar](https://avatars.githubusercontent.com/u/136967348?v=4)
+<div class="avatar-container">
+  <div class="avatar-text">
+    <h1>Hello, I'm Afzal Hassan 👋</h1>
+    <p>I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.</p>
+  </div>
+  <div class="avatar-image">
+    ![GitHub Avatar](https://avatars.githubusercontent.com/u/136967348?v=4)
+  </div>
+</div>
 
 ## What I Can Help You With
 
