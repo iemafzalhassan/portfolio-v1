@@ -69,9 +69,27 @@ portfolio-v1/
 
 ## Deployment
 
-### Quick Deployment
+### Automated Deployment (Recommended)
 
-Use the provided deployment script for one-command deployment:
+This portfolio uses **GitHub Actions** for automated deployment. Every push to the `main` branch triggers:
+
+1. **Lint & Check**: Markdown validation and link checking
+2. **Build**: Hugo site generation
+3. **Deploy**: Automatic deployment to GitHub Pages
+4. **Notify**: Slack notifications for deployment status
+
+**To deploy:**
+```bash
+git add .
+git commit -m "Your commit message"
+git push origin main
+```
+
+The deployment will automatically start and you'll receive Slack notifications.
+
+### Manual Deployment
+
+Use the provided deployment script for manual deployment:
 
 ```bash
 ./deploy.sh
@@ -171,6 +189,24 @@ The Blowfish theme offers extensive customization options:
 - Layout options
 - Typography settings
 - Social media integration
+
+## Monitoring Deployment
+
+### GitHub Actions
+- **View Workflows**: Go to [Actions tab](https://github.com/iemafzalhassan/portfolio-v1/actions) in your repository
+- **Check Logs**: Click on any workflow run to see detailed logs
+- **Manual Trigger**: Use "workflow_dispatch" to manually trigger deployment
+
+### Slack Notifications
+You'll receive notifications for:
+- 🚀 **Deployment Start**: When the process begins
+- ✅ **Success**: When deployment completes successfully
+- ❌ **Failure**: If any step fails with error details
+
+### Deployment Status
+- **Site URL**: https://portfolio.iemafzalhassan.in/
+- **GitHub Pages**: https://iemafzalhassan.github.io/portfolio-pages/
+- **Actions Logs**: https://github.com/iemafzalhassan/portfolio-v1/actions
 
 ## Troubleshooting
 
