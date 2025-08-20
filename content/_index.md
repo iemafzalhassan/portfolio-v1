@@ -14,10 +14,10 @@ recentLimit: 6
 
 ## 🌟 About Me  
 
-Hi, I’m **Afzal Hassan** — a DevOps Engineer from India.  
+Hi, I'm **Afzal Hassan** — a DevOps Engineer from India.  
 I bridge the gap between **development** and **operations** by designing **scalable, automated, and secure systems**.  
 
-I’m passionate about:  
+I'm passionate about:  
 - 🚀 **Scaling production systems**  
 - ⚡ **Automation with Infrastructure as Code (IaC)**  
 - ☁️ **Cloud & Edge Computing**  
@@ -58,11 +58,23 @@ I’m passionate about:
 
 ## ✨ Philosophy  
 
-> *“Infrastructure as Code is not just a practice, it’s a mindset that transforms how we build and maintain systems.”*  
+> *"Infrastructure as Code is not just a practice, it's a mindset that transforms how we build and maintain systems."*  
 
 ---
 
-## 📬 Let’s Connect  
+## 📬 Let's Connect  
 
-{{< social-icons >}}
+{{< button href="https://github.com/iemafzalhassan" target="_blank" >}}
+GitHub
+{{< /button >}}
+
+{{< button href="https://linkedin.com/in/iemafzalhassan" target="_blank" >}}
+LinkedIn
+{{< /button >}}
+
+{{< button href="https://x.com/iemafzalhassan" target="_blank" >}}
+Twitter
+{{< /button >}}
+
+---
 
