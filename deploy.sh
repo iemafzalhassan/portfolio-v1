@@ -130,13 +130,6 @@ build_site() {
     # Build with minification
     if hugo --minify --cleanDestinationDir; then
         log "SUCCESS" "Site built successfully"
-        
-        # Ensure CNAME file exists
-        if [ ! -f "public/CNAME" ]; then
-            log "INFO" "Adding CNAME file for custom domain"
-            echo "portfolio.iemafzalhassan.in" > public/CNAME
-        fi
-        
         return 0
     else
         log "ERROR" "Hugo build failed"
