@@ -1,138 +1,243 @@
-# Portfolio Website
+# Personal Portfolio Website
 
-A personal portfolio website built with Hugo and the Blowfish theme, deployed using GitHub Pages.
+A modern, responsive portfolio website built with Hugo and the Blowfish theme. This project demonstrates clean architecture, automated deployment, and best practices for personal branding online.
 
-## 🚀 Quick Start
+## Overview
 
-### Prerequisites
-- [Hugo Extended](https://gohugo.io/installation/) (v0.110.0 or higher)
-- Git
+This portfolio showcases my work as a DevOps Engineer and Cloud Enthusiast, featuring projects, blog posts, and professional information. The site is built with Hugo for fast performance and deployed automatically via GitHub Pages with a custom domain.
 
-### Local Development
+## Features
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/iemafzalhassan/portfolio-v1.git
-   cd portfolio-v1
-   ```
+- **Fast & Responsive**: Built with Hugo for optimal performance
+- **Modern Design**: Clean, professional layout using Blowfish theme
+- **Custom Domain**: Deployed at portfolio.iemafzalhassan.in
+- **Automated Deployment**: One-command deployment via Git submodules
+- **SEO Optimized**: Built-in search engine optimization
+- **Mobile Friendly**: Responsive design for all devices
 
-2. **Initialize submodules**
-   ```bash
-   git submodule update --init --recursive
-   ```
+## Prerequisites
 
-3. **Start local server**
-   ```bash
-   hugo server -D
-   ```
+Before you begin, ensure you have the following installed:
 
-4. **View your site**
-   Open http://localhost:1313 in your browser
+- **Hugo Extended** (v0.110.0 or higher) - [Installation Guide](https://gohugo.io/installation/)
+- **Git** - [Download Git](https://git-scm.com/downloads)
+- **A GitHub account** for hosting
 
-## 📁 Project Structure
+## Getting Started
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/iemafzalhassan/portfolio-v1.git
+cd portfolio-v1
+```
+
+### Step 2: Initialize Submodules
+
+This project uses Git submodules for the theme and deployment. Initialize them:
+
+```bash
+git submodule update --init --recursive
+```
+
+### Step 3: Start Local Development
+
+Run the development server to preview your site:
+
+```bash
+hugo server -D
+```
+
+Your site will be available at `http://localhost:1313`
+
+## Project Structure
 
 ```
 portfolio-v1/
-├── content/           # Your content (Markdown files)
-│   ├── _index.md     # Homepage
-│   ├── about/        # About page
-│   ├── projects/     # Projects page
-│   └── blogs/        # Blog posts
-├── public/           # Git submodule (deployment target)
-├── themes/           # Hugo themes
-│   └── blowfish/     # Blowfish theme
-├── hugo.toml         # Hugo configuration
-├── deploy.sh         # Deployment script
-└── README.md         # This file
+├── content/              # Your content (Markdown files)
+│   ├── _index.md        # Homepage content
+│   ├── about/           # About page
+│   ├── projects/        # Project showcases
+│   └── blogs/           # Blog posts
+├── public/              # Git submodule (deployment target)
+├── themes/              # Hugo themes
+│   └── blowfish/        # Blowfish theme
+├── hugo.toml            # Hugo configuration
+├── deploy.sh            # Deployment script
+└── README.md            # This file
 ```
 
-## 🚀 Deployment
+## Deployment
 
-### Simple Deployment
-Use the provided deployment script:
+### Quick Deployment
+
+Use the provided deployment script for one-command deployment:
+
 ```bash
 ./deploy.sh
 ```
 
+This script will:
+1. Build your Hugo site
+2. Navigate to the public directory
+3. Commit and push changes to GitHub Pages
+4. Deploy your site automatically
+
 ### Manual Deployment
-1. Build the site:
-   ```bash
-   hugo --minify
-   ```
 
-2. Deploy to GitHub Pages:
-   ```bash
-   cd public
-   git add .
-   git commit -m "Deploy: $(date)"
-   git push origin main
-   ```
+If you prefer manual control:
 
-## 🌐 Live Site
+```bash
+# Build the site
+hugo --minify
 
-Your portfolio will be available at:
-**https://iemafzalhassan.github.io/portfolio-pages/**
+# Deploy to GitHub Pages
+cd public
+git add .
+git commit -m "Deploy: $(date)"
+git push origin main
+```
 
-## 📝 Content Management
+## Custom Domain Setup
+
+This portfolio uses a custom domain (`portfolio.iemafzalhassan.in`). To set up your own:
+
+### 1. DNS Configuration
+
+Configure your domain's DNS records:
+- **Type**: CNAME
+- **Name**: `portfolio` (or your preferred subdomain)
+- **Value**: `yourusername.github.io`
+
+### 2. GitHub Pages Settings
+
+1. Go to your GitHub repository settings
+2. Navigate to "Pages" section
+3. Add your custom domain
+4. Enable "Enforce HTTPS" once available
+
+### 3. CNAME File
+
+The `public/CNAME` file contains your custom domain. Ensure it's included in your repository:
+
+```
+portfolio.iemafzalhassan.in
+```
+
+## Content Management
 
 ### Adding New Pages
+
 1. Create a new `.md` file in the appropriate directory under `content/`
 2. Add front matter with title and description
 3. Write your content in Markdown
 
 ### Example Page Structure
+
 ```markdown
 ---
-title: "Page Title"
-description: "Page description"
+title: "My New Page"
+description: "A brief description of this page"
+date: 2024-01-01
 ---
 
-# Your content here
+# Page Title
+
+Your content goes here...
 ```
 
-## 🎨 Customization
+### Key Content Files
 
-### Theme Configuration
+- **Homepage**: `content/_index.md`
+- **About Page**: `content/about/_index.md`
+- **Projects**: `content/projects/_index.md`
+- **Blog Posts**: `content/blogs/_index.md`
+
+## Customization
+
+### Site Configuration
+
 Edit `hugo.toml` to customize:
 - Site title and description
-- Menu items
+- Menu structure
 - Theme appearance
-- Social links
+- Social media links
+- Base URL for deployment
 
-### Content Updates
-- **Homepage**: Edit `content/_index.md`
-- **About**: Edit `content/about/_index.md`
-- **Projects**: Edit `content/projects/_index.md`
-- **Blog**: Edit `content/blogs/_index.md`
+### Theme Customization
 
-## 🔧 Troubleshooting
+The Blowfish theme offers extensive customization options:
+- Color schemes
+- Layout options
+- Typography settings
+- Social media integration
 
-### Common Issues
+## Troubleshooting
 
-1. **Submodule not initialized**
-   ```bash
-   git submodule update --init --recursive
-   ```
+### Common Issues and Solutions
 
-2. **Theme not found**
-   ```bash
-   git submodule update --init themes/blowfish
-   ```
+**Submodule not initialized**
+```bash
+git submodule update --init --recursive
+```
 
-3. **Build errors**
-   - Check Hugo version: `hugo version`
-   - Verify configuration in `hugo.toml`
+**Theme not found**
+```bash
+git submodule update --init themes/blowfish
+```
 
-## 📚 Resources
+**Build errors**
+- Verify Hugo version: `hugo version`
+- Check configuration in `hugo.toml`
+- Ensure all required files are present
+
+**Deployment issues**
+- Verify CNAME file exists in public directory
+- Check GitHub Pages settings
+- Ensure repository has proper permissions
+
+**Custom domain not working**
+- Verify DNS configuration
+- Check CNAME file content
+- Wait up to 1 hour for DNS propagation
+
+## Performance Optimization
+
+This portfolio is optimized for:
+- **Fast loading times** through Hugo's static generation
+- **SEO optimization** with proper meta tags and structure
+- **Mobile responsiveness** for all devices
+- **Accessibility** following web standards
+
+## Security Considerations
+
+- HTTPS is enforced for secure connections
+- No sensitive data is stored in the repository
+- Regular updates to dependencies
+- Secure deployment practices
+
+## Contributing
+
+This is a personal portfolio project, but suggestions and improvements are welcome. Feel free to:
+- Report issues
+- Suggest enhancements
+- Share feedback on design or functionality
+
+## Resources
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
-- [Blowfish Theme](https://blowfish.page/)
-- [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- [Blowfish Theme Documentation](https://blowfish.page/)
+- [Git Submodules Guide](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
 
-## 🤝 Contributing
+## License
 
-Feel free to submit issues and enhancement requests!
+This project is open source and available under the MIT License. See the LICENSE file for details.
 
-## 📄 License
+## Contact
 
-This project is open source and available under the [MIT License](LICENSE).
+For questions or feedback about this portfolio setup, feel free to reach out through the contact information provided on the website.
+
+---
+
+*Built with Hugo and deployed on GitHub Pages*
