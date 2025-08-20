@@ -8,8 +8,7 @@ recentLimit: 6
 
 **DevOps Engineer | Cloud & Automation Enthusiast | Open Source Contributor**
 
-![GitHub Avatar](https://avatars.githubusercontent.com/u/136967348?v=4)
-{{< figure src="/img/profile.png" caption="Afzal Hassan Avatar" >}}
+{{< figure src="/img/profile.png" >}}
 
 ---
 
