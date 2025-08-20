@@ -3,8 +3,6 @@ title: "Projects"
 description: "My DevOps and Automation Projects"
 ---
 
-# Projects
-
 A collection of my hands-on DevOps and automation projects.
 
 ## Featured Projects

@@ -1,16 +1,14 @@
 ---
-title: "iemafzalhassan"
+title: "Hello, I'm Afzal Hassan 👋"
 description: "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
 layout: "page"
 showRecent: true
 recentLimit: 6
 ---
 
-# Hello, I'm Afzal Hassan 👋
-
 I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.
 
-![Profile Image](/img/profile.png)
+![Profile Image](static/img/profile.png)
 
 ## What I Can Help You With
 
