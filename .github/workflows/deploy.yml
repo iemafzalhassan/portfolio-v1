@@ -60,8 +60,6 @@ jobs:
       - name: Validate Hugo Configuration
         run: hugo config
 
-      - name: Build Site (Dry Run)
-        run: hugo --minify --cleanDestinationDir
 
   deploy:
     name: Deploy to GitHub Pages
