@@ -99,12 +99,14 @@ jobs:
           }' ${{ env.SLACK_WEBHOOK_URL }}
 
       - name: Build Hugo Site
+        id: build
         run: |
           hugo --minify --cleanDestinationDir
           # Ensure CNAME file exists
           echo "portfolio.iemafzalhassan.in" > public/CNAME
 
       - name: Deploy to GitHub Pages
+        id: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
@@ -113,8 +115,17 @@ jobs:
           external_repository: iemafzalhassan/portfolio-pages
           cname: portfolio.iemafzalhassan.in
 
+  notify:
+    name: Send Notifications
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: always() && github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
       - name: Send Slack Success Notification
-        if: success() && ${{ env.SLACK_WEBHOOK_URL != '' }}
+        if: needs.deploy.result == 'success' && env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "attachments": [{
@@ -124,7 +135,7 @@ jobs:
               "fields": [
                 {"title": "Repository", "value": "${{ github.repository }}", "short": true},
                 {"title": "Branch", "value": "${{ github.ref_name }}", "short": true},
-                {"title": "Build Duration", "value": "${{ job.status }}", "short": true},
+                {"title": "Status", "value": "Success", "short": true},
                 {"title": "Site URL", "value": "https://portfolio.iemafzalhassan.in/", "short": true}
               ],
               "footer": "GitHub Actions"
@@ -132,7 +143,9 @@ jobs:
           }' ${{ env.SLACK_WEBHOOK_URL }}
 
       - name: Send Slack Failure Notification
-        if: failure() && ${{ env.SLACK_WEBHOOK_URL != '' }}
+        if: needs.deploy.result == 'failure' && env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "attachments": [{
@@ -142,8 +155,8 @@ jobs:
               "fields": [
                 {"title": "Repository", "value": "${{ github.repository }}", "short": true},
                 {"title": "Branch", "value": "${{ github.ref_name }}", "short": true},
-                {"title": "Commit", "value": "${{ github.sha }}", "short": true},
-                {"title": "Failed Step", "value": "${{ job.status }}", "short": true}
+                {"title": "Status", "value": "Failed", "short": true},
+                {"title": "Logs", "value": "https://github.com/${{ github.repository }}/actions", "short": true}
               ],
               "footer": "GitHub Actions"
             }]
