@@ -7,7 +7,7 @@
 set -e  # Exit on any error
 
 # Configuration
-SLACK_WEBHOOK="https://hooks.slack.com/services/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"
+SLACK_WEBHOOK="${SLACK_WEBHOOK_URL:-}"
 SITE_URL="https://portfolio.iemafzalhassan.in/"
 DEPLOY_START_TIME=$(date +%s)
 
@@ -186,27 +186,35 @@ calculate_deploy_time() {
 main() {
     log "INFO" "Starting portfolio deployment..."
     
-    # Send start notification
-    send_slack_notification "🚀 Starting portfolio deployment..." "warning" "Started"
+    # Send start notification (only if webhook is configured)
+    if [ -n "$SLACK_WEBHOOK" ]; then
+        send_slack_notification "🚀 Starting portfolio deployment..." "warning" "Started"
+    fi
     
     # Run pre-checks
     if ! run_pre_checks; then
         log "ERROR" "Pre-deployment checks failed"
-        send_slack_notification "❌ Pre-deployment checks failed. Deployment aborted." "danger" "Failed"
+        if [ -n "$SLACK_WEBHOOK" ]; then
+            send_slack_notification "❌ Pre-deployment checks failed. Deployment aborted." "danger" "Failed"
+        fi
         exit 1
     fi
     
     # Build site
     if ! build_site; then
         log "ERROR" "Site build failed"
-        send_slack_notification "❌ Site build failed. Check Hugo configuration and content." "danger" "Failed"
+        if [ -n "$SLACK_WEBHOOK" ]; then
+            send_slack_notification "❌ Site build failed. Check Hugo configuration and content." "danger" "Failed"
+        fi
         exit 1
     fi
     
     # Deploy site
     if ! deploy_site; then
         log "ERROR" "Deployment failed"
-        send_slack_notification "❌ Deployment to GitHub Pages failed. Check repository permissions." "danger" "Failed"
+        if [ -n "$SLACK_WEBHOOK" ]; then
+            send_slack_notification "❌ Deployment to GitHub Pages failed. Check repository permissions." "danger" "Failed"
+        fi
         exit 1
     fi
     
@@ -216,13 +224,15 @@ main() {
     # Success notification
     local success_message="✅ Portfolio deployed successfully in ${deploy_time}s! Site is live at $SITE_URL"
     log "SUCCESS" "$success_message"
-    send_slack_notification "$success_message" "good" "Successful"
+    if [ -n "$SLACK_WEBHOOK" ]; then
+        send_slack_notification "$success_message" "good" "Successful"
+    fi
     
     log "INFO" "Deployment pipeline completed!"
 }
 
 # Trap errors and send failure notification
-trap 'send_slack_notification "❌ Deployment failed with error. Check logs for details." "danger" "Failed"' ERR
+trap 'if [ -n "$SLACK_WEBHOOK" ]; then send_slack_notification "❌ Deployment failed with error. Check logs for details." "danger" "Failed"; fi' ERR
 
 # Run main function
 main "$@"

@@ -9,7 +9,7 @@ on:
 
 env:
   HUGO_VERSION: "0.119.0"
-  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 jobs:
   lint-and-check:
