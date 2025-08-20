@@ -6,8 +6,6 @@ showRecent: true
 recentLimit: 6
 ---
 
-# Hello, I'm Afzal Hassan 👋
-
 I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.
 
 ![GitHub Avatar](https://avatars.githubusercontent.com/u/136967348?v=4)
