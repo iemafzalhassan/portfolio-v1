@@ -17,6 +17,11 @@ env:
   HUGO_VERSION: "0.119.0"
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
+# Prevent multiple deployments running simultaneously
+concurrency:
+  group: "portfolio-deployment"
+  cancel-in-progress: true
+
 jobs:
   lint-and-check:
     name: Lint and Pre-checks
