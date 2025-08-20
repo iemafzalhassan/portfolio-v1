@@ -80,15 +80,8 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
-      - name: Debug Environment Variables
-        run: |
-          echo "SLACK_WEBHOOK_URL is set: ${{ env.SLACK_WEBHOOK_URL != '' }}"
-          echo "SLACK_WEBHOOK_URL length: ${#SLACK_WEBHOOK_URL}"
-          echo "All env vars:"
-          env | grep -i slack || echo "No SLACK env vars found"
-
       - name: Send Slack Start Notification
-        if: env.SLACK_WEBHOOK_URL != ''
+        if: ${{ env.SLACK_WEBHOOK_URL != '' }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "attachments": [{
@@ -121,7 +114,7 @@ jobs:
           cname: portfolio.iemafzalhassan.in
 
       - name: Send Slack Success Notification
-        if: success() && env.SLACK_WEBHOOK_URL != ''
+        if: success() && ${{ env.SLACK_WEBHOOK_URL != '' }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "attachments": [{
@@ -139,7 +132,7 @@ jobs:
           }' ${{ env.SLACK_WEBHOOK_URL }}
 
       - name: Send Slack Failure Notification
-        if: failure() && env.SLACK_WEBHOOK_URL != ''
+        if: failure() && ${{ env.SLACK_WEBHOOK_URL != '' }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "attachments": [{

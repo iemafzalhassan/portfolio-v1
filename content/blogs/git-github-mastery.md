@@ -475,7 +475,6 @@ Mastering Git, GitHub, and GitLab is vital for modern software development. By u
 
 - [Pro Git Book](https://git-scm.com/book/en/v2) - Comprehensive Git guide
 - [GitHub Guides](https://guides.github.com/) - GitHub tutorials and best practices
-- [GitLab Documentation](https://docs.gitlab.com/) - Official GitLab documentation
 - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) - Quick reference
 - [GitHub Flow](https://guides.github.com/introduction/flow/) - GitHub's recommended workflow
 
