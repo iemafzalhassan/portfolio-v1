@@ -1,6 +1,6 @@
 baseURL = 'https://iemafzalhassan.me/portfolio-pages/'
 languageCode = 'en-us'
-title = 'Afzal Hassan - DevOps Engineer'
+title = 'iemafzalhassan'
 theme = 'blowfish'
 
 # Enable features

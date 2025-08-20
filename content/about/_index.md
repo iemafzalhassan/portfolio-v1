@@ -1,11 +1,14 @@
 ---
 title: "About"
-description: "About Afzal Hassan"
+description: "About Afzal Hassan - DevOps Engineer & Cloud Enthusiast"
+layout: "page"
 ---
 
 # About Me
 
 I'm Afzal Hassan, a DevOps engineer who loves building scalable systems and automating everything.
+
+![About Me](/img/about.jpg)
 
 ## Skills & Expertise
 
