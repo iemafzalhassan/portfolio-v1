@@ -1,0 +1,142 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Allow manual triggering
+
+env:
+  HUGO_VERSION: "0.119.0"
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+jobs:
+  lint-and-check:
+    name: Lint and Pre-checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Markdown Linter
+        run: |
+          npm install -g markdownlint-cli
+          npm install -g markdown-link-check
+
+      - name: Lint Markdown Files
+        run: |
+          markdownlint content/**/*.md --config .markdownlint.json || true
+
+      - name: Check Markdown Links
+        run: |
+          find content -name "*.md" -exec markdown-link-check {} \; || true
+
+      - name: Validate Hugo Configuration
+        run: hugo config
+
+      - name: Build Site (Dry Run)
+        run: hugo --minify --cleanDestinationDir
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: lint-and-check
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Send Slack Start Notification
+        if: env.SLACK_WEBHOOK != ''
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{
+            "attachments": [{
+              "color": "warning",
+              "title": "Portfolio Deployment Started",
+              "text": "🚀 Starting automated deployment via GitHub Actions...",
+              "fields": [
+                {"title": "Repository", "value": "${{ github.repository }}", "short": true},
+                {"title": "Branch", "value": "${{ github.ref_name }}", "short": true},
+                {"title": "Commit", "value": "${{ github.sha }}", "short": true},
+                {"title": "Triggered by", "value": "${{ github.actor }}", "short": true}
+              ],
+              "footer": "GitHub Actions"
+            }]
+          }' ${{ env.SLACK_WEBHOOK }}
+
+      - name: Build Hugo Site
+        run: |
+          hugo --minify --cleanDestinationDir
+          # Ensure CNAME file exists
+          echo "portfolio.iemafzalhassan.in" > public/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: main
+          repository_name: ${{ github.repository_owner }}/portfolio-pages
+          cname: portfolio.iemafzalhassan.in
+
+      - name: Send Slack Success Notification
+        if: success() && env.SLACK_WEBHOOK != ''
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{
+            "attachments": [{
+              "color": "good",
+              "title": "Portfolio Deployment Successful",
+              "text": "✅ Portfolio deployed successfully! Site is live at https://portfolio.iemafzalhassan.in/",
+              "fields": [
+                {"title": "Repository", "value": "${{ github.repository }}", "short": true},
+                {"title": "Branch", "value": "${{ github.ref_name }}", "short": true},
+                {"title": "Build Duration", "value": "${{ job.status }}", "short": true},
+                {"title": "Site URL", "value": "https://portfolio.iemafzalhassan.in/", "short": true}
+              ],
+              "footer": "GitHub Actions"
+            }]
+          }' ${{ env.SLACK_WEBHOOK }}
+
+      - name: Send Slack Failure Notification
+        if: failure() && env.SLACK_WEBHOOK != ''
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{
+            "attachments": [{
+              "color": "danger",
+              "title": "Portfolio Deployment Failed",
+              "text": "❌ Deployment failed. Check GitHub Actions logs for details.",
+              "fields": [
+                {"title": "Repository", "value": "${{ github.repository }}", "short": true},
+                {"title": "Branch", "value": "${{ github.ref_name }}", "short": true},
+                {"title": "Commit", "value": "${{ github.sha }}", "short": true},
+                {"title": "Failed Step", "value": "${{ job.status }}", "short": true}
+              ],
+              "footer": "GitHub Actions"
+            }]
+          }' ${{ env.SLACK_WEBHOOK }}
