@@ -9,6 +9,8 @@ Every system I touch, I aim to make it **resilient, observable, and future-ready
 
 💡 For me, **DevOps = Art + Engineering**. It’s about painting stability with automation, coding pipelines that feel alive, and turning infrastructure into something as seamless as software.
 
+![About Me Hero Image](/img/about.jpg)
+
 ---
 
 ## 🚀 Skills & Toolbelt  
@@ -61,4 +63,3 @@ You’ll often find me:
 > *“DevOps is not a role. It’s a culture of curiosity, automation, and continuous improvement — and I live by it every day.”*  
 — Afzal Hassan  
 
----
