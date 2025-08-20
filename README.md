@@ -19,7 +19,7 @@ This portfolio showcases my work as a DevOps Engineer and Cloud Enthusiast, feat
 
 Before you begin, ensure you have the following installed:
 
-- **Hugo Extended** (v0.110.0 or higher) - [Installation Guide](https://gohugo.io/installation/)
+- **Hugo Extended** (v0.148.2 or higher) - [Installation Guide](https://gohugo.io/installation/)
 - **Git** - [Download Git](https://git-scm.com/downloads)
 - **A GitHub account** for hosting
 

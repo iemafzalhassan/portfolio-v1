@@ -14,7 +14,7 @@ permissions:
   id-token: write
 
 env:
-  HUGO_VERSION: "0.119.0"
+  HUGO_VERSION: "0.148.2"
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 # Prevent multiple deployments running simultaneously
