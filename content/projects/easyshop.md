@@ -8,7 +8,7 @@ author: "Afzal Hassan"
 draft: false
 ---
 
-## 🛍️ EasyShop Demo - E-commerce Solution
+## 🛍️ EasyShop Demo - E-commerce Application
 
 A modern e-commerce demo application designed to showcase web development capabilities and deployment best practices. This project demonstrates clean code architecture, responsive design, and modern development workflows.
 
