@@ -6,130 +6,84 @@ theme = 'blowfish'
 # Enable features
 enableGitInfo = false
 enableEmoji = true
+enableRobotsTXT = true
+enableSearch = true
+enableFingerprinting = false
 
 # Build settings
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-
-# Output settings
 publishDir = 'public'
-
-# Assets configuration
-[assets]
-  [assets.css]
-    toCSS = { minify = true }
-  [assets.js]
-    toJS = { minify = true }
 
 # Menu configuration
 [menu]
   [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/about/'
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
     weight = 10
+  [[menu.main]]
+    identifier = 'blogs'
+    name = 'Posts'
+    url = '/blogs/'
+    weight = 20
   [[menu.main]]
     identifier = 'projects'
     name = 'Projects'
     url = '/projects/'
-    weight = 20
-  [[menu.main]]
-    identifier = 'blogs'
-    name = 'Blog'
-    url = '/blogs/'
     weight = 30
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 40
 
-# Blowfish theme configuration
+# Blowfish theme parameters
 [params]
   # Site description
   description = "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
   
-  # Theme appearance
-  colorScheme = "midnight"  # Professional color scheme
-  defaultAppearance = "dark"  # Modern dark theme
-  autoSwitchAppearance = true  # Allow users to switch
-  
-  # Professional features
-  enableSearch = true
-  enableCodeCopy = true
-  enableA11y = true  # Accessibility features
-  
-  # SEO and performance
-  fingerprintAlgorithm = "sha512"
+  # Color scheme - Noir theme
+  colorScheme = "noir"
   
   # Author information
   [params.author]
     name = "Afzal Hassan"
-    image = "/img/profile.jpg"  # Add your profile image
+    image = "/img/profile.png"
     bio = "DevOps Engineer & Cloud Enthusiast"
     links = [
-      { name = "GitHub", url = "https://github.com/iemafzalhassan", icon = "github" },
-      { name = "LinkedIn", url = "https://linkedin.com/in/iemafzalhassan", icon = "linkedin" },
-      { name = "Twitter", url = "https://twitter.com/iemafzalhassan", icon = "twitter" }
+      { name = "GitHub", url = "https://github.com/iemafzalhassan" },
+      { name = "LinkedIn", url = "https://www.linkedin.com/in/iemafzalhassan/" },
+      { name = "Twitter", url = "https://x.com/iemafzalhassan" }
     ]
   
   # Header configuration
   [params.header]
-    layout = "fixed"  # Professional fixed header
+    layout = "fixed"
+    desktopMode = "fixed"
+    mobileMode = "auto"
   
   # Footer configuration
   [params.footer]
+    enable = true
     showMenu = true
     showCopyright = true
     showThemeAttribution = true
     showAppearanceSwitcher = true
-    showScrollToTop = true
   
-  # Homepage configuration
+  # Search configuration
+  [params.search]
+    enable = true
+    type = "fuse"
+    fuseOpts = { keys = ["title", "permalink", "summary", "content"] }
+  
+  # Social icons
+  [params.socialIcons]
+    github = "https://github.com/iemafzalhassan"
+    linkedin = "https://www.linkedin.com/in/iemafzalhassan/"
+    twitter = "https://x.com/iemafzalhassan"
+  
+  # Home page configuration
   [params.homepage]
-    layout = "profile"  # Professional profile layout
+    layout = "page"
     showRecent = true
     recentLimit = 6
-    showMoreLink = true
-    showMoreLinkDest = "blogs"
-  
-  # Article configuration
-  [params.article]
-    showDate = true
-    showDateUpdated = true
-    showAuthor = true
-    showHero = true
-    heroStyle = "background"  # Professional hero style
-    showBreadcrumbs = true
-    showReadingTime = true
-    showTableOfContents = true
-    showRelatedContent = true
-    showTaxonomies = true
-    showWordCount = true
-    sharingLinks = ["linkedin", "twitter", "github", "email"]
-  
-  # List configuration
-  [params.list]
-    showHero = true
-    heroStyle = "background"
-    showBreadcrumbs = true
-    showSummary = true
-    cardView = true
-  
-  # Profile configuration
-  [params.profile]
-    title = "Afzal Hassan"
-    subtitle = "DevOps Engineer & Cloud Enthusiast"
-    imageUrl = "/img/profile.jpg"
-    imageTitle = "Afzal Hassan"
-    buttons = [
-      { name = "GitHub", url = "https://github.com/iemafzalhassan", icon = "github" },
-      { name = "LinkedIn", url = "https://linkedin.com/in/iemafzalhassan", icon = "linkedin" },
-      { name = "Resume", url = "/resume.pdf", icon = "file-pdf" }
-    ]
-
-# Markup configuration
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    noClasses = false
-    noHl = false
-    style = "github-dark"  # Professional code highlighting
+    showFullTextinRSS = true
