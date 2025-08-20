@@ -1,7 +1,7 @@
 ---
 title: "Retail Store Sample App - GitOps with EKS Auto Mode"
 description: "Modern microservices architecture deployed on AWS EKS using GitOps principles with ArgoCD, Terraform, and GitHub Actions"
-date: 2024-11-11
+date: 2025-07-30
 tags: ["AWS", "EKS", "GitOps", "ArgoCD", "Terraform", "Kubernetes", "Microservices", "DevOps", "CI/CD"]
 categories: ["Infrastructure", "DevOps", "Cloud Native"]
 author: "Afzal Hassan"

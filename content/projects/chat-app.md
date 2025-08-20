@@ -1,7 +1,7 @@
 ---
 title: "Full Stack Real-Time Chat Application"
 description: "Scalable and secure real-time chat experience built with Node.js, React, Socket.io, and MongoDB"
-date: 2024-11-11
+date: 2024-09-17
 tags: ["React", "Node.js", "Socket.io", "MongoDB", "Docker", "Real-time", "WebSocket", "JWT", "TailwindCSS"]
 categories: ["Full Stack", "Web Development", "Real-time Applications"]
 author: "Afzal Hassan"

@@ -1,7 +1,7 @@
 ---
 title: "EasyShop Demo - E-commerce Solution"
 description: "Modern e-commerce demo application showcasing web development and deployment best practices"
-date: 2024-11-11
+date: 2025-01-28
 tags: ["E-commerce", "Web Development", "Demo", "Modern UI", "Responsive Design"]
 categories: ["E-commerce", "Web Development", "Demo Projects"]
 author: "Afzal Hassan"
