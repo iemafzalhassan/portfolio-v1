@@ -1,4 +1,4 @@
-baseURL = 'https://iemafzalhassan.me/portfolio-pages/'
+baseURL = 'https://portfolio.iemafzalhassan.in/'
 languageCode = 'en-us'
 title = 'iemafzalhassan'
 theme = 'blowfish'
