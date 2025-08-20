@@ -8,7 +8,7 @@ recentLimit: 6
 
 I'm a **DevOps Engineer** living in India. Bridging Development and Operations | Passionate About Scaling & Orchestrating Production Applications with DevOps.
 
-![Profile Image](static/img/profile.png)
+![Profile Image](https://avatars.githubusercontent.com/u/136967348?v=4)
 
 ## What I Can Help You With
 
