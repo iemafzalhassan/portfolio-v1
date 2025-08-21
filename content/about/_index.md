@@ -28,7 +28,7 @@ Every system I touch, I aim to make it **resilient, observable, and future-ready
 ### ⚡ CI/CD & DevOps Engineering  
 - **Pipelines:** Jenkins, GitLab CI, GitHub Actions, Azure DevOps  
 - **Source Control:** Git, GitHub, GitLab, Bitbucket  
-- **Artifacts:** Nexus, Artifactory, Docker Registry, Nexus
+- **Artifacts:** Nexus, Artifactory, Docker Registry, AWS ECR, GCR
 
 ### 📊 Monitoring & Observability  
 - **Metrics:** Prometheus, Grafana, CloudWatch  
