@@ -2,10 +2,14 @@
 title: "Full Stack Real-Time Chat Application"
 description: "Scalable and secure real-time chat experience built with Node.js, React, Socket.io, and MongoDB"
 date: 2024-09-17
-tags: ["React", "Node.js", "Socket.io", "MongoDB", "Docker", "Real-time", "WebSocket", "JWT", "TailwindCSS"]
-categories: ["Full Stack", "Web Development", "Real-time Applications"]
+tags: ["React", "Node.js", "Socket.io", "MongoDB", "Docker", "Real-time", "WebSocket", "JWT", "TailwindCSS", "Microservices"]
+categories: ["Full Stack", "Web Development", "Real-time Applications", "DevOps"]
 author: "Afzal Hassan"
 draft: false
+thumbnail: "/img/chat-app.jpg"
+featured: true
+projectUrl: "https://full-stack-chat-app-xi.vercel.app"
+githubUrl: "https://github.com/iemafzalhassan/full-stack_chatApp"
 ---
 
 ## 💬 Full Stack Real-Time Chat Application

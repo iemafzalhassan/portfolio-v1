@@ -3,8 +3,12 @@ title: "Git and GitHub Mastery: A Complete Guide to Version Control"
 description: "Master Git, GitHub, and GitLab with this comprehensive guide covering version control, branching, collaboration, and DevOps practices."
 date: 2025-08-20
 draft: false
-tags: ["git", "github", "gitlab", "version-control", "devops", "collaboration"]
-categories: ["Development", "DevOps"]
+tags: ["git", "github", "gitlab", "version-control", "devops", "collaboration", "ci-cd"]
+categories: ["Development", "DevOps", "Version Control"]
+author: "Afzal Hassan"
+thumbnail: "/img/git-github-mastery.jpg"
+featured: true
+readingTime: "15 min read"
 ---
 
 In today's fast-paced software development landscape, **version control** is essential for collaboration and project management. **Git** is the most widely adopted version control system, and platforms like **GitHub** and **GitLab** amplify its capabilities, making it easier for teams to collaborate effectively. This comprehensive guide will walk you through everything you need to know about Git, including its stages, branching, and real-world applications in both **development** and **DevOps**.

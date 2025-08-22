@@ -1,6 +1,6 @@
 baseURL = 'https://portfolio.iemafzalhassan.in/'
 languageCode = 'en-us'
-title = 'iemafzalhassan'
+title = 'Afzal Hassan - Senior DevOps Engineer'
 theme = 'blowfish'
 
 # Enable features
@@ -22,7 +22,7 @@ publishDir = 'public'
     weight = 10
   [[menu.main]]
     identifier = 'blogs'
-    name = 'Posts'
+    name = 'Blog'
     url = '/blogs/'
     weight = 20
   [[menu.main]]
@@ -38,22 +38,30 @@ publishDir = 'public'
 
 # Blowfish theme parameters
 [params]
-  description = "DevOps Engineer & Cloud Enthusiast | AWS, Azure, Kubernetes, Terraform"
+  description = "Senior DevOps Engineer & Cloud Architect | AWS, Azure, GCP, Kubernetes, Terraform | Building scalable, automated, and secure infrastructure at scale"
   colorScheme = "noir"
-
+  defaultTheme = "dark"
+  
+  # Enhanced author profile for senior DevOps engineer
   [params.author]
     name = "Afzal Hassan"
-    bio = "DevOps Engineer & Cloud Enthusiast"
+    bio = "Senior DevOps Engineer & Cloud Architect"
+    job = "Senior DevOps Engineer"
+    company = "Cloud Infrastructure Specialist"
+    location = "India"
+    avatar = "/img/profile.png"
     links = [
       { name = "GitHub", icon = "github", url = "https://github.com/iemafzalhassan" },
       { name = "LinkedIn", icon = "linkedin", url = "https://www.linkedin.com/in/iemafzalhassan/" },
-      { name = "Twitter", icon = "twitter", url = "https://x.com/iemafzalhassan" }
+      { name = "Twitter", icon = "twitter", url = "https://x.com/iemafzalhassan" },
+      { name = "Dev.to", icon = "dev", url = "https://dev.to/iemafzalhassan" }
     ]
 
   [params.header]
     layout = "fixed"
     desktopMode = "fixed"
     mobileMode = "auto"
+    showTitle = true
 
   [params.footer]
     enable = true
@@ -70,5 +78,77 @@ publishDir = 'public'
   [params.homepage]
     layout = "page"
     showRecent = true
-    recentLimit = 3
+    recentLimit = 6
     showFullTextinRSS = true
+
+  # Enhanced SEO and social sharing
+  [params.social]
+    twitter = "iemafzalhassan"
+    github = "iemafzalhassan"
+    linkedin = "iemafzalhassan"
+
+  # Custom CSS for animations and styling
+  [params.customCSS]
+    enable = true
+    files = ["custom.css"]
+
+  # Enhanced article settings
+  [params.article]
+    showToc = true
+    showBreadcrumbs = true
+    showReadingTime = true
+    showWordCount = true
+    showLastMod = true
+    showAuthor = true
+    showDate = true
+    showSummary = true
+    showTags = true
+    showCategories = true
+
+  # Enhanced list settings
+  [params.list]
+    showSummary = true
+    showThumbnail = true
+    showDate = true
+    showAuthor = true
+    showReadingTime = true
+
+# Enhanced taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+  author = "authors"
+
+# Enhanced markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    noHl = false
+    tabWidth = 4
+    trimPrefix = ""
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    hl_inline = false
+    lineNoStart = 1
+    lineNosTable = false
+    noClasses = false
+    noHl = false
+    style = "dracula"
+    tabWidth = 4
+    trimPrefix = ""
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    hl_inline = false
+    lineNoStart = 1
+    lineNosTable = false

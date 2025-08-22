@@ -2,10 +2,14 @@
 title: "EasyShop Demo - E-commerce Solution"
 description: "Modern e-commerce demo application showcasing web development and deployment best practices"
 date: 2025-01-28
-tags: ["E-commerce", "Web Development", "Demo", "Modern UI", "Responsive Design"]
-categories: ["E-commerce", "Web Development", "Demo Projects"]
+tags: ["E-commerce", "Web Development", "Demo", "Modern UI", "Responsive Design", "DevOps"]
+categories: ["E-commerce", "Web Development", "Demo Projects", "Full Stack"]
 author: "Afzal Hassan"
 draft: false
+thumbnail: "/img/easyshop.jpg"
+featured: true
+projectUrl: "https://easyshop-demo.vercel.app"
+githubUrl: "https://github.com/iemafzalhassan/easyshop--demo"
 ---
 
 ## 🛍️ EasyShop Demo - E-commerce Application

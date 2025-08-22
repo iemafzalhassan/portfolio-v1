@@ -2,10 +2,13 @@
 title: "Running Llama 3.2 Locally with OpenWebUI and Docker"
 description: "Complete guide to set up Llama 3.2 AI model locally with OpenWebUI using Docker for privacy-focused AI interactions"
 date: 2024-11-11
-tags: ["AI", "Llama", "Docker", "OpenWebUI", "DevOps", "Privacy", "Local AI"]
-categories: ["AI", "DevOps", "Docker"]
+tags: ["AI", "Llama", "Docker", "OpenWebUI", "DevOps", "Privacy", "Local AI", "Containerization"]
+categories: ["AI", "DevOps", "Docker", "Machine Learning"]
 author: "Afzal Hassan"
 draft: false
+thumbnail: "/img/ollama-llama.jpg"
+featured: true
+readingTime: "12 min read"
 ---
 
 If you've ever wanted to run a powerful AI language model like Llama 3.2 on your own computer—without worrying about sharing your data with companies or relying on cloud services—this guide will walk you through the entire process. We'll cover how to download, install, and set up **OpenWebUI** on your local machine using **Docker** and integrate it with a locally installed **Llama 3.2 model**.
