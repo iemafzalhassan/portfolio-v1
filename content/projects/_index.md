@@ -66,9 +66,7 @@ From **full-stack applications** to **infrastructure automation**, these project
 
 Explore my latest projects that demonstrate cutting-edge DevOps and cloud engineering practices.
 
-{{< button href="/projects/" class="btn-primary" >}}
-  View All Projects
-{{< /button >}}
+<a href="/projects/" class="btn">View All Projects</a>
 
 ---
 
@@ -106,13 +104,8 @@ Feel free to reach out!
 
 <div class="text-center mt-8">
   <div class="flex justify-center space-x-4">
-    {{< button href="https://github.com/iemafzalhassan" target="_blank" class="btn-primary" >}}
-      <i class="fab fa-github mr-2"></i>GitHub Profile
-    {{< /button >}}
-    
-    {{< button href="mailto:afzal@example.com" class="btn-primary" >}}
-      <i class="fas fa-envelope mr-2"></i>Get In Touch
-    {{< /button >}}
+    <a href="https://github.com/iemafzalhassan" target="_blank" class="btn">GitHub Profile</a>
+    <a href="mailto:afzal@example.com" class="btn">Get In Touch</a>
   </div>
 </div>
 

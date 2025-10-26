@@ -1,14 +1,18 @@
 baseURL = 'https://portfolio.iemafzalhassan.in/'
 languageCode = 'en-us'
-title = 'Afzal Hassan - Senior DevOps Engineer'
-theme = 'blowfish'
+title = 'iemafzalhassan'
+theme = 'PaperMod'
 
 # Enable features
 enableGitInfo = false
 enableEmoji = true
 enableRobotsTXT = true
-enableSearch = true
-enableFingerprinting = false
+enableFingerprinting = true
+enableInlineShortcodes = true
+enableMissingTranslationPlaceholders = false
+
+# Main sections for recent articles
+mainSections = ["blogs", "projects"]
 
 # Build settings
 publishDir = 'public'
@@ -36,82 +40,27 @@ publishDir = 'public'
     url = '/about/'
     weight = 40
 
-# Blowfish theme parameters
+# PaperMod theme parameters
 [params]
-  description = "Senior DevOps Engineer & Cloud Architect | AWS, Azure, GCP, Kubernetes, Terraform | Building scalable, automated, and secure infrastructure at scale"
-  colorScheme = "noir"
-  defaultTheme = "dark"
+  env = 'production'
+  title = 'Afzal Hassan - DevOps Engineer'
+  description = 'DevOps Engineer | AWS, Azure, GCP, Kubernetes, Terraform | Building scalable, automated, and secure infrastructure at scale'
   
-  # Enhanced author profile for senior DevOps engineer
+  # Author information
   [params.author]
     name = "Afzal Hassan"
-    bio = "Senior DevOps Engineer & Cloud Architect"
-    job = "Senior DevOps Engineer"
-    company = "Cloud Infrastructure Specialist"
-    location = "India"
-    avatar = "/img/profile.png"
-    links = [
-      { name = "GitHub", icon = "github", url = "https://github.com/iemafzalhassan" },
-      { name = "LinkedIn", icon = "linkedin", url = "https://www.linkedin.com/in/iemafzalhassan/" },
-      { name = "Twitter", icon = "twitter", url = "https://x.com/iemafzalhassan" },
-      { name = "Dev.to", icon = "dev", url = "https://dev.to/iemafzalhassan" }
-    ]
-
-  [params.header]
-    layout = "fixed"
-    desktopMode = "fixed"
-    mobileMode = "auto"
-    showTitle = true
-
+    image = "/img/profile.png"
+    email = "iemafzalhassan@gmail.com"
+    
+  # Footer configuration
   [params.footer]
     enable = true
     showMenu = true
     showCopyright = true
     showThemeAttribution = false
-    showAppearanceSwitcher = true
-
-  [params.search]
-    enable = true
-    type = "fuse"
-    fuseOpts = { keys = ["title", "permalink", "summary", "content"] }
-
-  [params.homepage]
-    layout = "page"
-    showRecent = true
-    recentLimit = 6
-    showFullTextinRSS = true
-
-  # Enhanced SEO and social sharing
-  [params.social]
-    twitter = "iemafzalhassan"
-    github = "iemafzalhassan"
-    linkedin = "iemafzalhassan"
-
-  # Custom CSS for animations and styling
-  [params.customCSS]
-    enable = true
-    files = ["custom.css"]
-
-  # Enhanced article settings
-  [params.article]
-    showToc = true
-    showBreadcrumbs = true
-    showReadingTime = true
-    showWordCount = true
-    showLastMod = true
-    showAuthor = true
-    showDate = true
-    showSummary = true
-    showTags = true
-    showCategories = true
-
-  # Enhanced list settings
-  [params.list]
-    showSummary = true
-    showThumbnail = true
-    showDate = true
-    showAuthor = true
-    showReadingTime = true
+    showScrollToTop = true
+    hideFooter = false
+    text = "Building the future, one deployment at a time."
 
 # Enhanced taxonomies
 [taxonomies]
@@ -125,6 +74,7 @@ publishDir = 'public'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      xhtml = false
   [markup.highlight]
     style = "dracula"
     lineNos = true
