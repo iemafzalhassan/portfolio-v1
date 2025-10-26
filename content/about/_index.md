@@ -176,21 +176,10 @@ I'm always interested in discussing cloud architecture, DevOps practices, and te
 
 <div class="text-center mt-8">
   <div class="flex justify-center space-x-4">
-    {{< button href="https://github.com/iemafzalhassan" target="_blank" class="btn-primary" >}}
-      <i class="fab fa-github mr-2"></i>GitHub
-    {{< /button >}}
-    
-    {{< button href="https://linkedin.com/in/iemafzalhassan" target="_blank" class="btn-primary" >}}
-      <i class="fab fa-linkedin mr-2"></i>LinkedIn
-    {{< /button >}}
-    
-    {{< button href="https://x.com/iemafzalhassan" target="_blank" class="btn-primary" >}}
-      <i class="fab fa-twitter mr-2"></i>Twitter
-    {{< /button >}}
-    
-    {{< button href="mailto:afzal@example.com" class="btn-primary" >}}
-      <i class="fas fa-envelope mr-2"></i>Email
-    {{< /button >}}
+    <a href="https://github.com/iemafzalhassan" target="_blank" class="btn">GitHub</a>
+    <a href="https://linkedin.com/in/iemafzalhassan" target="_blank" class="btn">LinkedIn</a>
+    <a href="https://x.com/iemafzalhassan" target="_blank" class="btn">Twitter</a>
+    <a href="mailto:afzal@example.com" class="btn">Email</a>
   </div>
 </div>
 

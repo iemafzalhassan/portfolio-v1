@@ -70,9 +70,7 @@ Whether you're a seasoned DevOps engineer or just starting your cloud journey, t
 
 Stay updated with my latest thoughts and tutorials on DevOps and cloud engineering.
 
-{{< button href="/blogs/" class="btn-primary" >}}
-  View All Articles
-{{< /button >}}
+<a href="/blogs/" class="btn">View All Articles</a>
 
 ---
 
@@ -84,13 +82,8 @@ Get notified when I publish new articles about DevOps, cloud architecture, and i
   <p class="text-lg mb-4">Never miss an update!</p>
   
   <div class="flex justify-center space-x-4">
-    {{< button href="https://github.com/iemafzalhassan" target="_blank" class="btn-primary" >}}
-      <i class="fab fa-github mr-2"></i>Follow on GitHub
-    {{< /button >}}
-    
-    {{< button href="https://x.com/iemafzalhassan" target="_blank" class="btn-primary" >}}
-      <i class="fab fa-twitter mr-2"></i>Follow on Twitter
-    {{< /button >}}
+    <a href="https://github.com/iemafzalhassan" target="_blank" class="btn">Follow on GitHub</a>
+    <a href="https://x.com/iemafzalhassan" target="_blank" class="btn">Follow on Twitter</a>
   </div>
 </div>
 
